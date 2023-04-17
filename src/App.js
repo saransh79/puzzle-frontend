@@ -1,25 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import Login from './components/Auth/Login'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Home from './components/Home'
+import Signup from './components/Auth/Signup'
+import Admin from './components/Admin/Admin'
+import './style.css'
+import Problem1 from './components/Problems/Problem1'
+import Problem2 from './components/Problems/Problem2'
+import Problem3 from './components/Problems/Problem3'
+import Problem4 from './components/Problems/Problem4'
+import Stats from './components/Problems/Stats'
+import Rules from './components/Rules'
+import Leaderboard from './components/Leaderboard'
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' exact element={<Home />} />
+        <Route path='/login'  element={<Login />} />
+        <Route path='/signup' element={<Signup />} />
+        <Route path='/admin' element={<Admin />} />
+        <Route path='/problem1' element={<Problem1 />} />
+        <Route path='/problem2' element={<Problem2 />} />
+        <Route path='/problem3' element={<Problem3 />} />
+        <Route path='/problem4' element={<Problem4 />} />
+        <Route path='/rules' element={<Rules />} />
+        <Route path='/stats' element={<Stats />} />
+        <Route path='/leaderboard' element= {<Leaderboard />} />
+      </Routes>
+    </BrowserRouter>
+  )
 }
 
-export default App;
+export default App
