@@ -16,11 +16,9 @@ const Admin = () => {
     }, [])
 
     const deleteUser = async (e) => {
-        e.preventDefault();
-        console.log(e.target.getAttribute('email'));
+        alert("Delete User?")
         await axios.post(`${baseUrl}/admin/delete-user`, { email: e.target.getAttribute('email') })
-        window.location.reload
-            (false)
+        window.location.reload(false)
     }
     return (
         <div>

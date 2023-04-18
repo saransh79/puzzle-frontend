@@ -31,7 +31,8 @@ const Navbar = () => {
                 justifyContent: 'space-between',
                 background: '#343a40'
             }}>
-                <Typography variant='h5' onClick={() => { navigate('/') }}>Puzzle Website</Typography>
+                <Typography variant='h5' onClick={() => { navigate('/') }}
+                sx={{cursor: 'pointer'}}>Puzzle Website</Typography>
 
                 <Button
                     id="basic-button"

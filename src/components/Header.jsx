@@ -47,6 +47,14 @@ const Header = () => {
             fontSize: '30px',
             color: '#fff'
           }} >Rules</Button>
+        { localStorage.getItem('username') === 'saransh' ?
+          <Button variant='outlined' color='error' size='large'
+          onClick={()=>{navigate('/admin')}} sx={{
+            border: 'none',
+            fontSize: '30px',
+            color: '#fff'
+          }} >Dashboard</Button> : <></>
+        }
       </div>
 
     </div>
