@@ -12,7 +12,7 @@ const Header = () => {
     <div style={{
       background: 'url(/images/header1.jpg) no-repeat center fixed',
       width: '100vw',
-      height: '90vh',
+      height: '94vh',
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center'

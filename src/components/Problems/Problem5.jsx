@@ -9,7 +9,7 @@ import styled from '@emotion/styled';
 const Box = styled('div')({
   margin: '20px 0'
 })
-const Problem4 = () => {
+const Problem5 = () => {
   const navigate = useNavigate()
   const [data, setData] = useState('')
   const [response, setResponse] = useState('');
@@ -22,7 +22,7 @@ const Problem4 = () => {
   }
   const userAnswer = {
     username: localStorage.getItem('username'),
-    id: 4,
+    id: 5,
     answer: data
   }
 
@@ -59,31 +59,23 @@ const Problem4 = () => {
           justifyContent: 'space-between',
           color: '#343a40'
         }}>
-          <Typography variant='h5' fontWeight='600'>Problem - 4</Typography>
+          <Typography variant='h5' fontWeight='600'>Problem - 5</Typography>
           <Typography variant='h5' fontWeight='600'>Score - 1</Typography>
         </Box>
 
         <Box >
           <Typography variant='h5' sx={{
             color: '#ffc107'
-          }}>You are a detective and you have to solve a murder case. The victim is a man who was stabbed in his apartment. There are four suspects: his wife, his maid, his cook, and his gardener. Each of them gave you an alibi:
-          </Typography>
-          <Typography variant='h6'>The wife said she was shopping at the mall.</Typography>
-          <Typography variant='h6'>The maid said she was cleaning the bathroom.</Typography>
-          <Typography variant='h6'>The cook said he was preparing dinner.
+          }}>A renowned chemist is found dead in his lab. There is no clear evidence except a piece of paper lying by the body. The paper is blank other than the name of five elements scrawled across it hastily:
           </Typography>
           <Typography variant='h6'>
-            The gardener said he was watering the plants.</Typography>
+            Nickel</Typography><Typography variant='h6'>
+            Carbon</Typography><Typography variant='h6'>
+            Oxygen</Typography><Typography variant='h6'>
+            Lanthanum</Typography><Typography variant='h6'>
+            Sulfur</Typography>
           <Typography variant='h6'>
-            You found a note on the victim’s body that said “2 4 9 1 7”. You also found a calendar on the wall with some dates circled:</Typography>
-          <Typography variant='h6'>
-            January 15</Typography><Typography variant='h6'>
-            February 19</Typography><Typography variant='h6'>
-            March 18</Typography><Typography variant='h6'>
-            April 12</Typography><Typography variant='h6'>
-            May 16</Typography>
-          <Typography variant='h6'>
-            Who is the killer and how did you figure it out?</Typography>
+            The guard reported that three people visited the chemist that day – his sister, Laura; his colleague, Nicolas; and his wife, Tessa. The criminal was arrested immediately. Who was it?</Typography>
         </Box>
         <Box style={{
           color: 'red'
@@ -107,17 +99,17 @@ const Problem4 = () => {
           </div>
           <Button variant='outlined'
             sx={{
-                            padding: {xs: '5px', sm: '15px 10px'}
-                        }} onClick={e => { navigate('/problem5') }}>Next Question</Button>
+              padding: { xs: '5px', sm: '15px 10px' }
+            }} onClick={e => { navigate('/stats') }}>See Score</Button>
         </Box>
         <Box>
           <Typography variant='h6' color='primary' sx={{ cursor: 'pointer' }} onClick={hints}>Show hint</Typography>
           <Typography variant='h6' color='red'>{localStorage.getItem('hints')} Hints left</Typography>
           {showHint && <Box>
             <Typography variant='h6'
-              color='red'>(A) Gardener</Typography>
+              color='red'>(A) Tessa</Typography>
             <Typography variant='h6'
-              color='red'>(B) Cook</Typography>
+              color='red'>(B) Nicolas</Typography>
           </Box>
           }
         </Box>
@@ -126,4 +118,4 @@ const Problem4 = () => {
   )
 }
 
-export default Problem4
+export default Problem5

@@ -51,7 +51,8 @@ const Problem1 = () => {
         <div>
             <Navbar />
             <Box style={{
-                margin: '30px 5%'
+                margin: '30px 5%',
+                height: '100vh'
             }}>
                 <Box style={{
                     display: 'flex',
@@ -64,7 +65,7 @@ const Problem1 = () => {
                 </Box>
 
                 <Box >
-                    <Typography variant='h4' sx={{
+                    <Typography variant='h5' sx={{
                         color: '#ffc107'
                     }}>A man is looking at a photograph of someone. His friend asks who it is. The man replies, “Brothers and sisters, I have none. But that man’s father is my father’s son.” Who was in the photograph?</Typography>
                 </Box>
@@ -88,9 +89,9 @@ const Problem1 = () => {
                                 padding: '15px 10px', margin: '0 10px'
                             }} onClick={handleSubmit}>Submit</Button>
                     </div>
-                    <Button variant='outlined'
+                    <Button variant='outlined' className='phonebutton'
                         sx={{
-                            padding: '15px 10px'
+                            padding: {xs: '5px', sm: '15px 10px'}
                         }} onClick={e => { navigate('/problem2') }}>Next Question</Button>
                 </Box>
                 <Box>

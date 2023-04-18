@@ -14,11 +14,15 @@ const Navbar = () => {
     };
     const handleClose = () => {
         setAnchorEl(null);
+    };
+    const logout=()=>{
+        setAnchorEl(null);
 
         localStorage.removeItem('token')
         localStorage.removeItem('username')
         localStorage.removeItem('hints')
-    };
+        navigate('/')
+    }
     const username = localStorage.getItem('username');
     return (
         <AppBar position='static'>
@@ -27,7 +31,7 @@ const Navbar = () => {
                 justifyContent: 'space-between',
                 background: '#343a40'
             }}>
-                <Typography variant='h4' onClick={() => { navigate('/') }}>Puzzle Website</Typography>
+                <Typography variant='h5' onClick={() => { navigate('/') }}>Puzzle Website</Typography>
 
                 <Button
                     id="basic-button"
@@ -59,7 +63,7 @@ const Navbar = () => {
                             'aria-labelledby': 'basic-button',
                         }}
                     >
-                        <MenuItem onClick={handleClose}>Logout</MenuItem>
+                        <MenuItem onClick={logout}>Logout</MenuItem>
                     </Menu>
                 }
             </Toolbar>

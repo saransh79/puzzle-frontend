@@ -12,22 +12,24 @@ import Problem4 from './components/Problems/Problem4'
 import Stats from './components/Problems/Stats'
 import Rules from './components/Rules'
 import Leaderboard from './components/Leaderboard'
+import Problem5 from './components/Problems/Problem5'
 
 const App = () => {
   return (
     <BrowserRouter>
       <Routes>
         <Route path='/' exact element={<Home />} />
-        <Route path='/login'  element={<Login />} />
+        <Route path='/login' element={<Login />} />
         <Route path='/signup' element={<Signup />} />
         <Route path='/admin' element={<Admin />} />
         <Route path='/problem1' element={<Problem1 />} />
         <Route path='/problem2' element={<Problem2 />} />
         <Route path='/problem3' element={<Problem3 />} />
         <Route path='/problem4' element={<Problem4 />} />
+        <Route path='/problem5' element={<Problem5 />} />
         <Route path='/rules' element={<Rules />} />
         <Route path='/stats' element={<Stats />} />
-        <Route path='/leaderboard' element= {<Leaderboard />} />
+        <Route path='/leaderboard' element={<Leaderboard />} />
       </Routes>
     </BrowserRouter>
   )

@@ -64,7 +64,7 @@ const Problem3 = () => {
                 </Box>
 
                 <Box >
-                    <Typography variant='h4' sx={{
+                    <Typography variant='h5' sx={{
                         color: '#ffc107'
                     }}>You are in a room with three doors. One door leads to freedom, one door leads to a lion that will eat you, and one door leads to a fire that will burn you. There are also three signs on the wall, each with a statement about the doors. However, only one of the signs is true, and the other two are false. The signs are:
 </Typography>
@@ -97,7 +97,7 @@ Which door should you choose to escape?</Typography>
                     </div>
                     <Button variant='outlined'
                         sx={{
-                            padding: '15px 10px'
+                            padding: {xs: '5px', sm: '15px 10px'}
                         }} onClick={e => { navigate('/problem4') }}>Next Question</Button>
                 </Box>
                 <Box>

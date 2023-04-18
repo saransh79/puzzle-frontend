@@ -64,7 +64,7 @@ const Problem2 = () => {
                 </Box>
 
                 <Box >
-                    <Typography variant='h4' sx={{
+                    <Typography variant='h5' sx={{
                         color: '#ffc107'
                     }}>There are five houses in five different colors in a row. In each house lives a person with a different nationality. The five owners drink a certain type of beverage, smoke a certain brand of cigar and keep a certain pet. No owners have the same pet, smoke the same brand of cigar or drink the same beverage.
 
@@ -139,7 +139,7 @@ The question is: Who owns the fish?</Typography>
                     </div>
                     <Button variant='outlined'
                         sx={{
-                            padding: '15px 10px'
+                            padding: {xs: '5px', sm: '15px 10px'}
                         }} onClick={e => { navigate('/problem3') }}>Next Question</Button>
                 </Box>
                 <Box>
@@ -148,9 +148,9 @@ The question is: Who owns the fish?</Typography>
                     {showHint && <Box>
                     
                         <Typography variant='h6'
-                            color='red'>(A) The Green</Typography>
+                            color='red'>(A) Green</Typography>
                         <Typography variant='h6'
-                            color='red'>(B) The German</Typography>
+                            color='red'>(B) German</Typography>
                     </Box>
                     }
                 </Box>
