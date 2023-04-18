@@ -12,8 +12,8 @@ const Stats = () => {
         const username = localStorage.getItem('username')
         async function getScore() {
             await axios.post(`${baseUrl}/user/getscore`, { username }).then(res => {
-                setScore(res.data)
                 console.log(res.data);
+                setScore(res.data)
             })
         }
         getScore()
@@ -28,13 +28,12 @@ const Stats = () => {
             justifyContent: 'center',
             flexDirection: 'column'
         }}>
-            <Typography variant='h2' color=''>Your score is {score.totalScore}</Typography>
+            <Typography variant='h2' color=''>Your score is {score}</Typography>
             <Button variant='outlined' size='large' onClick={() => {
                 navigate('/')
             }}>Go to Homepage
             </Button>
         </div >
-
     )
 }
 
