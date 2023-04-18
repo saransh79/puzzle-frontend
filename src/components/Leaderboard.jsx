@@ -17,7 +17,7 @@ const Leaderboard = () => {
   var rank=0;
   return (
     <div style={{
-      height: '100vh'
+      height: '100%'
     }}>
       <Navbar />
       <center>
